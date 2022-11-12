@@ -1,0 +1,193 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Links">
+	<main>
+		<div class="animated">
+			<section>
+				<header>
+					<img src="/profile-1.png" alt="avatar" />
+					<h1>@alvgaona</h1>
+				</header>
+				<ul>
+					<li>
+						<a href="https://twitter.com/alvgaona">
+							<img src="/twitter.svg" alt="Twitter" width="20" />
+							Twitter
+						</a>
+					</li>
+					<li>
+						<a href="https://instagram.com/alvgaona">
+							<img
+								src="/instagram.svg"
+								alt="Instagram"
+								width="20"
+							/>
+							Instagram
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/alvgaona">
+							<img src="/youtube.svg" alt="YouTube" width="20" />
+							YouTube
+						</a>
+					</li>
+					<li>
+						<a href="https://linkedin.com/in/alvaro-gaona">
+							<img
+								src="/linkedin.svg"
+								alt="LinkedIn"
+								width="20"
+							/>
+							LinkedIn
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://scholar.google.com/citations?user=unBAfxAAAAAJ"
+						>
+							<img
+								src="/scholar.svg"
+								alt="Google Scholar"
+								width="20"
+							/>
+							Google Scholar
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/alvgaona">
+							<img src="/github.svg" alt="Github" width="20" />
+							Github
+						</a>
+					</li>
+				</ul>
+			</section>
+			<footer>
+				<span>Powered by</span>
+				<img src="/astro.svg" alt="Astro"/>
+			</footer>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		width: 100%;
+		height: 100%;
+		background: url("/background-1.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	main > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(15px);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0.5rem 0 4rem 0;
+		padding: 0.5rem 0;
+		opacity: 1;
+	}
+
+	div.animated {
+		opacity: 1;
+		animation-name: fadeInBlurOpacity;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-duration: 3s;
+	}
+
+	@keyframes fadeInBlurOpacity {
+	0% {
+		opacity: 0;
+		filter: blur(15px);
+	}
+}
+
+
+	header {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+	}
+
+	header > img {
+		width: 6em;
+		height: 6em;
+		border-radius: 100%;
+		border: 1px solid rgba(255, 242, 0, 255);
+		box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+	}
+
+	header > h1 {
+		display: flex;
+		justify-content: center;
+		font-size: 0.8em;
+		font-weight: bold;
+		border-radius: 1em;
+		background-color: rgba(0, 0, 0, 0.3);
+		color: rgba(255, 255, 255);
+		padding: 0.3em 0.6em;
+		border: 1px solid rgba(255, 242, 0, 255);
+		backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+		-webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		align-self: center;
+		gap: 2em;
+		max-width: 480px;
+	}
+
+	ul > li {
+		display: flex;
+		justify-content: center;
+		background-color: gr;
+		border-radius: 2rem;
+		width: 280px;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	li > a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1em;
+		padding: 1em;
+		border-radius: 1px;
+		width: 100%;
+		color: rgba(1,1,1, 0.8);
+		background-color: rgba(233, 244, 244, 0.7);
+		border: 1px solid rgba(255, 242, 0, 255);
+		border-radius: 1em;
+	}
+
+	footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5em;
+		color: #fff;
+	}
+</style>
