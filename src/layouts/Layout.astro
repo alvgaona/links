@@ -1,43 +1,53 @@
 ---
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+import "@fontsource/m-plus-rounded-1c";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <title>Links</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:title" content="Links" />
+    <meta property="og:description" content="Links to all my social profiles" />
+    <meta property="og:url" content="https://links.alvgaona.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Links" />
+    <meta
+      property="twitter:description"
+      content="Links to all my social profiles"
+    />
+    <meta property="twitter:creator" content="@alvgaona" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6
-	}
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+    ---system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
 
-	body {
-		display: flex;
-		margin: 0;
-		width: 100vw;
-		height: 100vh;
-	}
+  html {
+    font-family: var(---system-ui);
+    background-color: #f6f6f6;
+  }
 
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  body {
+    display: flex;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
 </style>
