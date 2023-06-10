@@ -1,57 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import instagram from "../assets/instagram.svg";
+import github from "../assets/github.svg";
+import home from "../assets/home.svg";
+import twitter from "../assets/twitter.svg";
+import linkedin from "../assets/linkedin.svg";
+import scholar from "../assets/scholar.svg";
+import avatar from "../assets/avatar.png";
+import background from "../assets/background.jpg";
 ---
 
 <Layout title="Links">
   <main>
+    <img class="background" src={background.src} alt="background"/>
     <div class="animated">
       <section>
         <header>
-          <img src="/profile-1.png" alt="avatar" />
+          <img src={avatar.src} alt="avatar" />
           <h1>@alvgaona</h1>
         </header>
         <ul>
           <li>
             <a href="https://alvgaona.com">
-              <img src="/home.svg" alt="Website" width="20" />
+              <img src={home.src} alt="Website" width="20" />
               Website
             </a>
           </li>
           <li>
             <a href="https://twitter.com/alvgaona">
-              <img src="/twitter.svg" alt="Twitter" width="20" />
+              <img src={twitter.src} alt="Twitter" width="20" />
               Twitter
             </a>
           </li>
           <li>
             <a href="https://instagram.com/alvgaona">
-              <img src="/instagram.svg" alt="Instagram" width="20" />
+              <img src={instagram.src} alt="Instagram" width="20" />
               Instagram
             </a>
           </li>
           <li>
             <a href="https://linkedin.com/in/alvaro-gaona">
-              <img src="/linkedin.svg" alt="LinkedIn" width="20" />
+              <img src={linkedin.src} alt="LinkedIn" width="20" />
               LinkedIn
             </a>
           </li>
           <li>
             <a href="https://scholar.google.com/citations?user=unBAfxAAAAAJ">
-              <img src="/scholar.svg" alt="Google Scholar" width="20" />
+              <img src={scholar.src} alt="Google Scholar" width="20" />
               Google Scholar
             </a>
           </li>
           <li class="ripple">
             <a href="https://github.com/alvgaona">
-              <img src="/github.svg" alt="Github" width="20" />
+              <img src={github.src} alt="Github" width="20" />
               Github
             </a>
           </li>
         </ul>
       </section>
       <footer>
-        <span>Powered by</span>
-        <img src="/astro.svg" alt="Astro" />
+        <a href="https://astro.build">
+          <img
+            src="https://astro.badg.es/v1/built-with-astro/small.svg"
+            alt="Built with Astro"
+          />
+        </a>
       </footer>
     </div>
   </main>
@@ -61,10 +74,10 @@ import Layout from "../layouts/Layout.astro";
   main {
     width: 100%;
     height: 100%;
-    background: url("/background-1.png");
+    /* background: url("/background-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     font-family: "M PLUS Rounded 1c", var(---system-ui);
   }
 
@@ -75,7 +88,6 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(15px);
   }
 
   section {
@@ -112,7 +124,7 @@ import Layout from "../layouts/Layout.astro";
     width: 6em;
     height: 6em;
     border-radius: 100%;
-    border: 1px solid rgba(255, 242, 0, 255);
+    border: 1px solid rgba(0, 0, 0, 255);
     box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
   }
 
@@ -125,7 +137,7 @@ import Layout from "../layouts/Layout.astro";
     background-color: rgba(0, 0, 0, 0.3);
     color: rgba(255, 255, 255);
     padding: 0.3em 0.6em;
-    border: 1px solid rgba(255, 242, 0, 255);
+    border: 1px solid rgba(0, 0, 0, 255);
     backdrop-filter: blur(10px) saturate(160%) contrast(180%);
     -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
   }
@@ -139,7 +151,7 @@ import Layout from "../layouts/Layout.astro";
     flex-direction: column;
     padding: 0;
     align-self: center;
-    gap: 2em;
+    gap: 1.4em;
     max-width: 480px;
   }
 
@@ -165,7 +177,7 @@ import Layout from "../layouts/Layout.astro";
     width: 100%;
     color: rgba(1, 1, 1, 0.8);
     background-color: rgba(233, 244, 244, 0.7);
-    border: 1px solid rgba(255, 242, 0, 255);
+    border: 1px solid rgba(0, 0, 0, 255);
     border-radius: 1em;
   }
 
@@ -175,5 +187,13 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
     gap: 0.5em;
     color: #fff;
+  }
+
+  .background {
+    position: absolute;
+    object-fit: contain;
+    z-index: -20;
+    width: auto;
+    height: 100%;
   }
 </style>
