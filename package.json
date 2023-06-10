@@ -11,10 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.11.4",
+    "@astrojs/image": "^0.17.0",
     "@astrojs/vercel": "^2.3.3",
     "@fontsource/m-plus-rounded-1c": "^4.5.10",
-    "astro": "^1.6.7",
+    "astro": "^2.6.0",
     "sharp": "^0.31.2"
   }
 }
