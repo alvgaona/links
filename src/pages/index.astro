@@ -1,200 +1,64 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import instagram from "../assets/instagram.svg";
-import github from "../assets/github.svg";
-import home from "../assets/home.svg";
-import twitter from "../assets/twitter.svg";
-import linkedin from "../assets/linkedin.svg";
-import scholar from "../assets/scholar.svg";
-import avatar from "../assets/avatar.png";
-import background from "../assets/background.jpg";
+import Layout from "@/layouts/Layout.astro";
+import logo from "@/assets/logo-white-transparent.png";
 ---
 
-<Layout title="Links">
-  <main>
-    <img class="background" src={background.src} alt="background"/>
-    <div class="animated">
-      <section>
-        <header>
-          <img src={avatar.src} alt="avatar" />
-          <h1>@alvgaona</h1>
-        </header>
-        <ul>
-          <li>
-            <a href="https://alvgaona.com">
-              <img src={home.src} alt="Website" width="20" />
-              Website
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/alvgaona">
-              <img src={twitter.src} alt="Twitter" width="20" />
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com/alvgaona">
-              <img src={instagram.src} alt="Instagram" width="20" />
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/alvaro-gaona">
-              <img src={linkedin.src} alt="LinkedIn" width="20" />
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?user=unBAfxAAAAAJ">
-              <img src={scholar.src} alt="Google Scholar" width="20" />
-              Google Scholar
-            </a>
-          </li>
-          <li class="ripple">
-            <a href="https://github.com/alvgaona">
-              <img src={github.src} alt="Github" width="20" />
-              Github
-            </a>
-          </li>
-        </ul>
-      </section>
-      <footer>
-        <a href="https://astro.build">
-          <img
-            src="https://astro.badg.es/v1/built-with-astro/small.svg"
-            alt="Built with Astro"
-          />
-        </a>
-      </footer>
-    </div>
+<Layout meta={{ title: "Links" }}>
+  <div class="w-full flex justify-end">
+    <img src={logo.src} alt="Logo" width="24" class="mx-4 mt-4" />
+  </div>
+  <main class="flex flex-col justify-center items-center h-full">
+    <section class="flex flex-col justify-center items-center">
+      <ul class="flex flex-col gap-10">
+        <li>
+          <a
+            href="https://alvgaona.com"
+            class="underline underline-offset-4 decoration-vesper-gold"
+          >
+            Website
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://x.com/alvgaona"
+            class="underline underline-offset-4 decoration-vesper-gold"
+          >
+            X
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://instagram.com/alvgaona"
+            class="underline underline-offset-4 decoration-vesper-gold"
+          >
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://linkedin.com/in/alvaro-gaona"
+            class="underline underline-offset-4 decoration-vesper-gold"
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://scholar.google.com/citations?user=unBAfxAAAAAJ"
+            class="underline underline-offset-4 decoration-vesper-gold"
+          >
+            Google Scholar
+          </a>
+        </li>
+        <li class="ripple">
+          <a
+            href="https://github.com/alvgaona"
+            class="underline underline-offset-4 decoration-vesper-gold"
+          >
+            Github
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    width: 100%;
-    height: 100%;
-    /* background: url("/background-1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    font-family: "M PLUS Rounded 1c", var(---system-ui);
-  }
-
-  main > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-    padding: 0.5rem 0;
-    opacity: 1;
-  }
-
-  div.animated {
-    opacity: 1;
-    animation-name: fadeInBlurOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-duration: 3s;
-  }
-
-  @keyframes fadeInBlurOpacity {
-    0% {
-      opacity: 0;
-      filter: blur(15px);
-    }
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-  }
-
-  header > img {
-    width: 6em;
-    height: 6em;
-    border-radius: 100%;
-    border: 1px solid rgba(0, 0, 0, 255);
-    box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
-  }
-
-  header > h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 0.8em;
-    font-weight: bold;
-    border-radius: 1em;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: rgba(255, 255, 255);
-    padding: 0.3em 0.6em;
-    border: 1px solid rgba(0, 0, 0, 255);
-    backdrop-filter: blur(10px) saturate(160%) contrast(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    align-self: center;
-    gap: 1.4em;
-    max-width: 480px;
-  }
-
-  ul > li {
-    display: flex;
-    justify-content: center;
-    background-color: gr;
-    border-radius: 2rem;
-    width: 280px;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  li > a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    padding: 1em;
-    border-radius: 1px;
-    width: 100%;
-    color: rgba(1, 1, 1, 0.8);
-    background-color: rgba(233, 244, 244, 0.7);
-    border: 1px solid rgba(0, 0, 0, 255);
-    border-radius: 1em;
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    color: #fff;
-  }
-
-  .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -20;
-  }
-</style>

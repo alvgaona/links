@@ -1,7 +1,11 @@
 # IDE
 .vscode/
 
+# generated types
+.astro/
+
 # build output
+vercel/
 dist/
 .output/
 
